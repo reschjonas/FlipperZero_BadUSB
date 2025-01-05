@@ -148,11 +148,11 @@ If you would like to help me making this project even greater feel free to spons
 
 If you have any idea on how to make this Instruction to BadUsb scripts better, feel free to open an Issue or contact me via Discord. :)
 
-UNC0V3R3D – [@GitHub](https://github.com/UNC0V3R3D) – unc0v3r3d@proton.me
+UNC0V3R3D – [@GitHub](https://github.com/reschjonas) – reschjonas@pm.me
 
 Distributed under the MIT license. See ``LICENSE.md`` for more information. 
 
-[https://github.com/UNC0V3R3D/Flipper_Zero-BadUsb](https://github.com/UNC0V3R3D/)
+[[https://github.com/reschjonas/FlipperZero_BadUSB/](https://github.com/reschjonas/FlipperZero_BadUSB/)](https://github.com/reschjonas/)
 
 
 ## Credits
