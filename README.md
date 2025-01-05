@@ -152,7 +152,6 @@ UNC0V3R3D – [@GitHub](https://github.com/reschjonas) – reschjonas@pm.me
 
 Distributed under the MIT license. See ``LICENSE.md`` for more information. 
 
-[[https://github.com/reschjonas/FlipperZero_BadUSB/](https://github.com/reschjonas/FlipperZero_BadUSB/)](https://github.com/reschjonas/)
 
 
 ## Credits
@@ -160,8 +159,6 @@ Distributed under the MIT license. See ``LICENSE.md`` for more information.
 * [UberGuidoZ] , [FalsePhilosopher] and [I-am-Jakoby]
 * Make sure to check them out! They are the reason this repository exists. When I started learning how to create badusb scripts i learnt from them.
 
-
-[release]: https://github.com/UNC0V3R3D/Flipper_Zero-BadUsb/releases
 [UberGuidoZ]: https://github.com/UberGuidoZ
 [FalsePhilosopher]: https://github.com/FalsePhilosopher
 [I-am-Jakoby]: https://github.com/I-Am-Jakoby
