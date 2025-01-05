@@ -4,6 +4,13 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/UNC0V3R3D/Flipper_Zero-BadUsb/total?logo=GitHub) ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/UNC0V3R3D/Flipper_Zero-BadUsb) ![GitHub repo size](https://img.shields.io/github/repo-size/UNC0V3R3D/Flipper_Zero-BadUsb) ![GitHub release (release name instead of tag name)](https://img.shields.io/github/v/release/UNC0V3R3D/Flipper_Zero-BadUsb?include_prereleases)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=jo.112.nas@gmail.com&lc=US&no_note=0&item_name=Thank+you+for+suppporting+UNC0V3R3D's+Github+Project.&cn=&curency_code=EUR&bn=PP-DonationsBF:btn_donateCC_LG.gif:NonHosted)
 
+# Where did I go and why am I back?
+
+About a year ago, I made the decision to delete my old account, which caused the original repository to disappear. I took some time off to focus on more important things. Now, I’ve decided to bring the repository back and continue working on it whenever I have time.
+
+My goal is to improve all the scripts and make them fully plug-and-play. During my absence, I left room for other developers to contribute and innovate. Unfortunately, one individual decided to simply clone my scripts, make minor adjustments, and claim credit for them. Ironically, they forgot to change the original script names.
+
+For reference, you can find the repository here: https://github.com/Zenin0.
 
 # Before you start!
 
