@@ -1,6 +1,5 @@
 
 # The Ultimate Flipper Zero Badusb Collection
-<img src="https://github.com/UNC0V3R3D/ressources/blob/main/badusbpicnew.png" height="380" width="1050" >
 
 ![GitHub all releases](https://img.shields.io/github/downloads/UNC0V3R3D/Flipper_Zero-BadUsb/total?logo=GitHub) ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/UNC0V3R3D/Flipper_Zero-BadUsb) ![GitHub repo size](https://img.shields.io/github/repo-size/UNC0V3R3D/Flipper_Zero-BadUsb) ![GitHub release (release name instead of tag name)](https://img.shields.io/github/v/release/UNC0V3R3D/Flipper_Zero-BadUsb?include_prereleases)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=jo.112.nas@gmail.com&lc=US&no_note=0&item_name=Thank+you+for+suppporting+UNC0V3R3D's+Github+Project.&cn=&curency_code=EUR&bn=PP-DonationsBF:btn_donateCC_LG.gif:NonHosted)
