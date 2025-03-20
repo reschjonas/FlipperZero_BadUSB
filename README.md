@@ -19,7 +19,7 @@ If you want to purchase a completely unique and personalized script contact me o
 Windows:
 
 ```sh
-1. git clone https://github.com/UNC0V3R3D/Flipper_Zero-BadUsb.git
+1. git clone https://github.com/reschjonas/Flipper_Zero-BadUsb.git
 
 2. Use the qFlipper app to drag the files into the "BadUsb" folder on your Flipper.
 ```
