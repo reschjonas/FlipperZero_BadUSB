@@ -1,0 +1,23 @@
+REM ============================================================
+REM 🎵 Rick Roll - iOS
+REM ============================================================
+REM Author: dil1thium
+REM Version: 1.0
+REM Target: iPhone/iPad (unlocked)
+REM Category: Pranks
+REM
+REM ✅ PLUG AND PLAY
+REM Opens Rick Roll in Safari.
+REM ============================================================
+DELAY 1000
+GUI SPACE
+DELAY 800
+STRING Safari
+DELAY 500
+ENTER
+DELAY 2000
+GUI l
+DELAY 500
+STRING https://www.youtube.com/watch?v=dQw4w9WgXcQ
+DELAY 300
+ENTER

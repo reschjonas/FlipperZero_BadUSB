@@ -1,0 +1,26 @@
+REM ============================================================
+REM 🗑️ Remove Bloatware - GoodUSB
+REM ============================================================
+REM Author: dil1thium
+REM Version: 3.0
+REM Target: Windows 10/11
+REM Category: GoodUSB
+REM
+REM ✅ PLUG AND PLAY
+REM Removes common Windows bloatware apps.
+REM ============================================================
+DELAY 500
+GUI r
+DELAY 400
+STRING powershell Start-Process powershell -Verb runAs
+ENTER
+DELAY 1500
+LEFTARROW
+DELAY 200
+ENTER
+DELAY 2000
+STRING $apps=@('Microsoft.3DBuilder','Microsoft.BingFinance','Microsoft.BingNews','Microsoft.BingSports','Microsoft.BingWeather','Microsoft.Getstarted','Microsoft.MicrosoftOfficeHub','Microsoft.MicrosoftSolitaireCollection','Microsoft.Office.OneNote','Microsoft.People','Microsoft.SkypeApp','Microsoft.WindowsMaps','Microsoft.ZuneMusic','Microsoft.ZuneVideo','Microsoft.XboxApp');foreach($app in $apps){Get-AppxPackage -Name $app -AllUsers|Remove-AppxPackage 2>$null;Write-Host "Removed: $app"};Write-Host 'Done!' -ForegroundColor Green
+ENTER
+DELAY 5000
+STRING exit
+ENTER

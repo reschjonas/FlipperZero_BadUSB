@@ -1,0 +1,33 @@
+REM ============================================================
+REM 💬 Send iMessage - iOS
+REM ============================================================
+REM Author: dil1thium
+REM Version: 1.0
+REM Target: iPhone/iPad (unlocked)
+REM Category: Pranks
+REM
+REM Sends an iMessage to a contact.
+REM
+REM CONFIGURE:
+REM   Replace PHONE_NUMBER with recipient
+REM   Replace YOUR_MESSAGE with message
+REM ============================================================
+DELAY 1000
+GUI SPACE
+DELAY 800
+STRING Messages
+DELAY 500
+ENTER
+DELAY 2000
+REM New message
+GUI n
+DELAY 800
+STRING PHONE_NUMBER
+DELAY 500
+ENTER
+DELAY 500
+REM Type message
+STRING YOUR_MESSAGE
+DELAY 300
+REM Send
+GUI ENTER

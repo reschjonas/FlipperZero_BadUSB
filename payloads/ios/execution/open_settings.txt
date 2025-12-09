@@ -1,0 +1,18 @@
+REM ============================================================
+REM ⚙️ Open Settings - iOS
+REM ============================================================
+REM Author: dil1thium
+REM Version: 1.0
+REM Target: iPhone/iPad (unlocked)
+REM Category: Execution
+REM
+REM ✅ PLUG AND PLAY
+REM Opens the Settings app.
+REM ============================================================
+DELAY 1000
+GUI SPACE
+DELAY 800
+STRING Settings
+DELAY 500
+ENTER
+DELAY 2000

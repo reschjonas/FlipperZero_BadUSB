@@ -1,0 +1,26 @@
+REM ============================================================
+REM 🌐 Open URL - iOS
+REM ============================================================
+REM Author: dil1thium
+REM Version: 1.0
+REM Target: iPhone/iPad (unlocked)
+REM Category: Execution
+REM
+REM Opens a URL in Safari.
+REM Note: iOS payloads cannot be modular (no terminal)
+REM
+REM CONFIGURE:
+REM   Replace YOUR_URL with target URL
+REM ============================================================
+DELAY 1000
+GUI SPACE
+DELAY 800
+STRING Safari
+DELAY 500
+ENTER
+DELAY 2000
+GUI l
+DELAY 500
+STRING YOUR_URL
+DELAY 300
+ENTER

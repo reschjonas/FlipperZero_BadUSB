@@ -1,0 +1,26 @@
+REM ============================================================
+REM 🔇 Disable Cortana - GoodUSB
+REM ============================================================
+REM Author: dil1thium
+REM Version: 3.0
+REM Target: Windows 10/11
+REM Category: GoodUSB
+REM
+REM ✅ PLUG AND PLAY
+REM Disables Cortana via registry.
+REM ============================================================
+DELAY 500
+GUI r
+DELAY 400
+STRING powershell Start-Process powershell -Verb runAs
+ENTER
+DELAY 1500
+LEFTARROW
+DELAY 200
+ENTER
+DELAY 2000
+STRING $p='HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search';if(!(Test-Path $p)){New-Item -Path $p -Force};Set-ItemProperty -Path $p -Name 'AllowCortana' -Value 0 -Force;Write-Host 'Cortana disabled! Restart to apply.' -ForegroundColor Green
+ENTER
+DELAY 2000
+STRING exit
+ENTER

@@ -1,0 +1,15 @@
+REM ============================================================
+REM 📸 Take Screenshot - iOS
+REM ============================================================
+REM Author: dil1thium
+REM Version: 1.0
+REM Target: iPhone/iPad (unlocked, external keyboard)
+REM Category: Pranks
+REM
+REM ✅ PLUG AND PLAY
+REM Takes a screenshot (saved to Photos).
+REM ============================================================
+DELAY 1000
+REM Screenshot: Cmd+Shift+3 (external keyboard)
+GUI SHIFT 3
+DELAY 500

